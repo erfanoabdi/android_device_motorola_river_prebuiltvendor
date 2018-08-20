@@ -55,7 +55,7 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libcutils \
     bootctrl.msm8953 \
-    libgptutils \
+    libgptutils.river.recovery \
     libz
 
 PRODUCT_BRAND := motorola
