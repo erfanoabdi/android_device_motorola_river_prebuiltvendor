@@ -52,12 +52,6 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl \
     update_engine_client
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    libcutils \
-    bootctrl.msm8953 \
-    libgptutils.river.recovery \
-    libz
-
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := river
 PRODUCT_MANUFACTURER := motorola

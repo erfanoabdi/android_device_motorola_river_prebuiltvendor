@@ -27,6 +27,11 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.msm8953.recovery
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
