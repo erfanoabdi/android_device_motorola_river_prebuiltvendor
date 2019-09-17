@@ -60,6 +60,13 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
+# Display - QDCM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/display/qdcm_calib_data_mipi_mot_vid_boe_1080p_624.xml:system/etc/qdcm_calib_data_mipi_mot_vid_boe_1080p_624.xml \
+    $(LOCAL_PATH)/display/qdcm_calib_data_mipi_mot_vid_tianma_1080p_624.xml:system/etc/qdcm_calib_data_mipi_mot_vid_tianma_1080p_624.xml \
+    $(LOCAL_PATH)/display/qdcm_calib_data_mipi_mot_vid_tianma_h_1080p_624.xml:system/etc/qdcm_calib_data_mipi_mot_vid_tianma_h_1080p_624.xml \
+    $(LOCAL_PATH)/display/qdcm_calib_data_mipi_mot_vid_tianma_n_1080p_624.xml:system/etc/qdcm_calib_data_mipi_mot_vid_tianma_n_1080p_624.xml
+
 # Fingerprint Gestures
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-egis.kl:system/usr/keylayout/uinput-egis.kl \
