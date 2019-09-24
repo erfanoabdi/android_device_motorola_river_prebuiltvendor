@@ -36,3 +36,6 @@ on init
     mount none /system/etc/qdcm_calib_data_mipi_mot_vid_tianma_1080p_624.xml /vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_1080p_624.xml bind
     mount none /system/etc/qdcm_calib_data_mipi_mot_vid_tianma_h_1080p_624.xml /vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_h_1080p_624.xml bind
     mount none /system/etc/qdcm_calib_data_mipi_mot_vid_tianma_n_1080p_624.xml /vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_n_1080p_624.xml bind
+
+    # Fix for Bluetooh Audio
+    mount none /system/etc/audio_effects.xml /vendor/etc/audio_effects.xml bind
