@@ -19,6 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -42,7 +48,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
-    brillo_update_payload \
     update_engine \
     update_engine_sideload \
     update_verifier
@@ -51,12 +56,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl \
     update_engine_client
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    libcutils \
-    bootctrl.msm8953 \
-    libgptutils \
-    libz
 
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := river
